@@ -18,3 +18,6 @@ class Solution(object):
             head = head.next
         return head
         
+        #since we don't know what the length of the linked list is, we have two pointers where both are pointing to first node
+        #we traverse the linked list with the first pointer to see how long the linked list is
+        #after finding out the length, use the second pointer to get the middle of the linked list using the length
