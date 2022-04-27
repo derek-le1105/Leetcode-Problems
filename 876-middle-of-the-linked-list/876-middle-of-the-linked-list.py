@@ -14,7 +14,7 @@ class Solution(object):
         while tempHead != None:
             count += 1
             tempHead = tempHead.next
-        for i in range(count//2):
+        for i in range(count/2):
             head = head.next
         return head
         
