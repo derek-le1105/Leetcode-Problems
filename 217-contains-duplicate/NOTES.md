@@ -1,1 +1,2 @@
-​
+creates a 'set' data structure where lists passed in are added to the 'set'
+'sets' do not allow duplicates so comparing the len of the new 'set' data structure and the len of the original nums list, we'll know if duplicates exist if the original nums list has a greater length than the new 'set' data structure we created
