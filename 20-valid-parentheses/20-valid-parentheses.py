@@ -1,37 +1,24 @@
-class Solution(object):
-    def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
-        stack = []
-        
-        if len(s) == 1:
+class Solution:
+    def isValid(self, s: str) -> bool:
+        parenStack = []
+        if len(s) % 2 != 0:
             return False
-        
-        for char in s:
-            if char == '(' or char == '{' or char == '[':
-                stack.append(char)
+        for i in range(len(s)):
+            if s[i] == '(' or s[i] == '[' or s[i] == '{':
+                parenStack.insert(0, s[i])
             else:
-                if len(stack) >= 1:
-                    if char == ')':
-                        if stack[len(stack)-1] == '(':
-                            stack.pop(len(stack)-1)
-                        else:
-                            return False
-                    elif char == '}':
-                        if stack[len(stack)-1] == '{':
-                            stack.pop(len(stack)-1)
-                        else:
-                                return False
-                    elif char == ']':
-                        if stack[len(stack)-1] == '[':
-                            stack.pop(len(stack)-1)
-                        else:
-                            return False
+                if len(parenStack) >= 1:
+                    if (parenStack[0] == '(' and s[i] == ')'):
+                        parenStack.pop(0) 
+                    elif (parenStack[0] == '[' and s[i] == ']'):
+                        parenStack.pop(0)
+                    elif (parenStack[0] == '{' and s[i] == '}'):
+                        parenStack.pop(0)
+                    else:
+                        return False
                 else:
                     return False
-        if len(stack) != 0:
+        if len(parenStack) > 0:
             return False
-        else:
-            return True
+        return True
+            
