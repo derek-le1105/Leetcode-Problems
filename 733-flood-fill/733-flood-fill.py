@@ -14,10 +14,7 @@ class Solution(object):
         
     
     def fill(self, image, sr, sc, prevColor, color):
-        if sr < 0 or sr >= len(image) or sc < 0 or sc >= len(image[0]):
-            return
-        print(sr, sc)
-        if image[sr][sc] == color:
+        if sr < 0 or sr >= len(image) or sc < 0 or sc >= len(image[0]) or image[sr][sc] == color:
             return
         if image[sr][sc] == prevColor:
             image[sr][sc] = color
