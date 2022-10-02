@@ -1,1 +1,2 @@
-​
+We can sort input array to make problem easier to solve
+After sorting, this question becomes a "two-pointers" question since we can find a pair of numbers that add to 0 when summed with the number found when iterating through the input sorted array.
