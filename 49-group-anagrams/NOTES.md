@@ -1,1 +1,1 @@
-​
+Since anagrams are words/phases that can be rearranged by ordering the characters differently, theses words/phases share the same amount of letters. Therefore, we can sort a tuple of these letters and use it in a hashmap to see if a specified word matches the tuple key of the hashmap.
