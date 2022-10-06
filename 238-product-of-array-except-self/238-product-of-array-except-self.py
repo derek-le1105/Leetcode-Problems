@@ -13,5 +13,6 @@ class Solution:
         
         for i in range(len(nums)):
             answer.append(leftProd[i] * rightProd[i])
+            
         return answer
         
