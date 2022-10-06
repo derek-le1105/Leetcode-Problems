@@ -1,1 +1,1 @@
-​
+O(n) solution as we only ever iterate through the array 'n' times where 'n' is the length of  the nums array
